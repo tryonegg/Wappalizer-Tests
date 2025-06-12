@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Technology Categories Browser</title>
+	<style>
+		.category-list {
+			cursor: pointer;
+		}
+
+		.category-item:hover {
+			background-color: #f0f0f0;
+		}
+
+		.tech-list {
+			margin-left: 20px;
+		}
+
+		.tech-item {
+			margin: 20px 0;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+		}
+
+		.tech-description {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		.tech-implies {
+			color: #666;
+			margin-bottom: 10px;
+			font-style: italic;
+		}
+
+		.tech-item code {
+			display: block;
+			white-space: pre;
+			background-color: #f8f8f8;
+			padding: 10px;
+			border: 1px solid #eee;
+			border-radius: 4px;
+			font-family: monospace;
+			margin-top: 10px;
+		}
+
+		.tech-implied-by {
+			color: #666;
+			margin: 10px 0;
+			font-style: italic;
+			font-size: 14px;
+		}
+
+		.tech-link {
+			color: #0366d6;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		.tech-link:hover {
+			color: #0056b3;
+		}
+
+		#tech-details {
+			margin-top: 20px;
+			padding: 15px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			background-color: #f8f8f8;
+		}
+
+		.tech-details-popup {
+			padding: 10px;
+		}
+
+		.tech-details-popup code {
+			display: block;
+			white-space: pre;
+			background-color: white;
+			padding: 10px;
+			margin-top: 10px;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+		}
+
+		.wrapper {
+			display: grid;
+			height: 100%;
+			grid-template-columns: auto 1fr;
+			overflow: hidden;
+			width: 100%;
+			grid-template-rows: 98vh;
+
+			& #categories,
+			& #technologies {
+				height: 100%;
+				overflow-y: scroll;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="categories"></div>
+		<div id="technologies"></div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
