@@ -132,6 +132,19 @@ function showTechnologies(category, categoryName) {
         name.textContent = tech.key;
         item.appendChild(name);
 
+        // URL section
+        if (tech.website) {
+            const urlDiv = document.createElement('div');
+            urlDiv.className = 'tech-url';
+            const link = document.createElement('a');
+            link.href = tech.website;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = tech.website;
+            urlDiv.appendChild(link);
+            item.appendChild(urlDiv);
+        }
+	    
         // Description section
         if (tech.Description) {
             const desc = document.createElement('div');
